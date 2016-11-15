@@ -15,6 +15,7 @@ body{
   height: 100vh;
   background: #fefefe;
 }
+
 .box{
   width: 100%;
   text-align: center;
@@ -98,7 +99,11 @@ body{
 
 }
 
-@media screen and (max-width: 1550px) {
+#send{
+  height:1200px;
+}
+
+@media screen and (max-width: 2400px) {
   .btn.top_btn{
     border-top: 0 solid transparent;
     border-right: 140px solid transparent;
@@ -148,10 +153,14 @@ body{
     height: 280px;
     font-size: 60px;
   }
+
+  #send{
+  height:720px;
+  }
+
 }
 
-
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1920px) {
   .box.top{
     margin-bottom: 20px;
   }
@@ -208,6 +217,11 @@ body{
     margin: 0 20px;
     font-size: 20px;
   }
+
+  #send{
+    height:360px;
+  }
+
 }
 
 @media screen and (max-width: 410px) {
@@ -267,6 +281,11 @@ body{
     margin: 0 10px;
     font-size: 10px;
   }
+
+  #send{
+    height:240px;
+  }
+
 }
 
 
