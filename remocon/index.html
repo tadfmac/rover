@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Controller</title>
+  <meta name="viewport" content="width=device-width">
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+  <script src='./js/jquery-2.0.3.min.js'></script>
+  <script src='./js/poorws.js'></script>
+  <link rel="stylesheet" href="./css/spinners.css" type="text/css">
+  <style>
+  @font-face{
+    font-family:GloriaHallelujah;
+    src:url(./font/GloriaHallelujah.ttf) format("truetype");
+  }
+
+  *{
+  	padding:0px;
+  	margin:0px;
+    box-sizing:border-box;
+
+  }
+  html,body{
+    height:100%;
+  }
+
+  body{
+    overflow:hidden;
+  }
+
+  #logo{
+    position:fixed;
+    z-index:102;
+    top:15px;
+    left:0px;
+    width:100%;
+    min-height:40px;
+    background-image:url("./logo.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center center;
+  }
+
+  #send{
+    display:none;
+  }
+  #statuswrap{
+    display:block;
+    position:fixed;
+    outline:0;
+    width:100%;
+    bottom:0;
+    left:0;
+    box-sizing:border-box;
+    height:40px;
+  }
+  #status{
+    font-family:GloriaHallelujah;
+    position: absolute;
+    z-index:101;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding:4px;
+    font-size:14px;
+    width:300px;
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    vertical-align:middle;
+  }
+
+  .can0{
+    background-color:orange;
+    color:black;
+  }
+  .can1{
+    background-color:bisque;
+    color:black;
+  }
+  .can2{
+    background-color:lightcyan;
+    color:black;
+  }
+  .can3{
+    background-color:aquamarine;
+    color:black;
+  }
+  #cover{
+    display:inline;
+    position:fixed;
+    z-index:100;
+    width:100%;
+    min-height:100%;
+    top:0;
+    left:0;
+  /*  background-color:rgba(0,0,0,0.8); */
+  }
+
+  #progress{
+    width:42px;
+    height:42px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  </style>
+</head>
+<body>
+
+
+
+
+<div id="wrapper" class="cheen">
+<div id="send">
+  <div class="box top">
+    <button class="btn top_btn" id="b_top"></button>
+  </div><!-- END top -->
+  <div class="box middle">
+    <button class="btn left_btn" id="b_left"></button>
+    <button class="stop_btn" id="b_center">Stop</button>
+    <button class="btn right_btn" id="b_right"></button>
+  </div><!-- END middle -->
+  <div class="box bottom">
+    <button class="btn bottom_btn" id="b_bottom"></button>
+  </div><!-- END top -->
+
+</div><!-- END #send -->
+
+
+
+</div>
+<div id="cover">
+  <div id="progress">
+    <span class="heartbeat-loader"></span>
+  </div>
+</div>
+<div id="statuswrap">
+  <div id="status">Connecting...</div>
+</div>
+<div id="logo"></div>
+<script>
+var host = "ws://mz4u.net:3003";
+//var host = "ws://localhost:3003";
+
+var ws = new poorws(host);
+var status = 0;
+
+var mode = Math.floor(Math.random() * 4);
+
+$("body").addClass("can"+mode);
+$("#status").addClass("can"+mode);
+
+ws.onStatusChange = function(sts){
+  status = sts;
+  if(sts == 0){
+    $("#status").text("Connecting...");
+  }else if(sts == 1){
+    $("#status").text("Connected!");
+    $("#cover").fadeOut("300");
+    $("#send").fadeIn("300");
+  }else if(sts == 2){
+    $("#status").text("Disconnecting...");
+  }else if(sts == 3){
+    $("#status").text("Re-Connecting...");
+    $("#send").fadeOut("300");
+    $("#cover").fadeIn("300");
+  }
+};
+
+
+// tk ここから
+$(function(){
+   $("#b_center").bind({
+     "touchstart mousedown":function(e){
+       ws.send("0");
+     }
+   });
+   $("#b_top").bind({
+     "touchstart mousedown":function(e){
+       ws.send("1");
+     }
+   });
+   $("#b_left").bind({
+     "touchstart mousedown":function(e){
+       ws.send("2");
+     }
+   });
+   $("#b_right").bind({
+     "touchstart mousedown":function(e){
+       ws.send("3");
+     }
+   });
+   $("#b_bottom").bind({
+     "touchstart mousedown":function(e){
+       ws.send("4");
+     }
+   });
+   $(".btn, .stop_btn").bind({
+     "touchstart mousedown":function(e){
+       $(this).addClass("on");
+     },
+     "touchend mouseup":function(){
+       $(this).removeClass("on");
+     }
+   });
+
+   $("body").bind({
+     "touchstart mousedown":function(e){
+       e.preventDefault();
+     }
+   });
+});
+
+</script>
+
+</body>
+</html>
