@@ -4,9 +4,10 @@
 
 # usage 
 
->$ npm install ws
->$ npm install date-utils
->$ node bridge3.js
-
+```.shell
+>$ npm install ws    
+>$ npm install date-utils    
+>$ node bridge3.js    
+```
 
 

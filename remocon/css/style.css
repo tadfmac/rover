@@ -44,8 +44,7 @@ body{
   border-bottom: 380px solid #565656;
   border-left: 340px solid transparent;
 }
-.btn.top_btn.on,
-.btn.top_btn:hover{
+.btn.top_btn.on{
   border-bottom: 380px solid #e49300;
 }
 
@@ -55,8 +54,7 @@ body{
   border-bottom: 340px solid transparent;
   border-left: 0 solid transparent;
 }
-.btn.left_btn.on,
-.btn.left_btn:hover{
+.btn.left_btn.on{
   border-right: 380px solid #e49300;
 }
 
@@ -66,8 +64,7 @@ body{
   border-bottom: 340px solid transparent;
   border-left: 380px solid #565656;
 }
-.btn.right_btn.on,
-.btn.right_btn:hover{
+.btn.right_btn.on{
   border-left: 380px solid #e49300;
 }
 
@@ -77,8 +74,7 @@ body{
   border-bottom: 0 solid transparent;
   border-left: 330px solid transparent;
 }
-.btn.bottom_btn.on,
-.btn.bottom_btn:hover{
+.btn.bottom_btn.on{
   border-top: 380px solid #e49300;
 }
 
@@ -93,8 +89,7 @@ body{
   color: #fff;
   font-weight: bold;
 }
-.stop_btn.on,
-.stop_btn:hover{
+.stop_btn.on{
   background: #e49300;
 
 }
@@ -121,8 +116,7 @@ body{
     border-bottom: 140px solid transparent;
     border-left: 0 solid transparent;
   }
-  .btn.left_btn.on,
-  .btn.left_btn:hover{
+  .btn.left_btn.on{
     border-right: 180px solid #e49300;
   }
 
@@ -132,8 +126,7 @@ body{
     border-bottom: 140px solid transparent;
     border-left: 180px solid #565656;
   }
-  .btn.right_btn.on,
-  .btn.right_btn:hover{
+  .btn.right_btn.on{
     border-left: 180px solid #e49300;
   }
 
@@ -143,8 +136,7 @@ body{
     border-bottom: 0 solid transparent;
     border-left: 140px solid transparent;
   }
-  .btn.bottom_btn.on,
-  .btn.bottom_btn:hover{
+  .btn.bottom_btn.on{
     border-top: 180px solid #e49300;
   }
 
@@ -173,8 +165,7 @@ body{
     border-bottom: 90px solid #565656;
     border-left: 70px solid transparent;
   }
-  .btn.top_btn.on,
-  .btn.top_btn:hover{
+  .btn.top_btn.on{
     border-bottom: 90px solid #e49300;
   }
 
@@ -184,8 +175,7 @@ body{
     border-bottom: 70px solid transparent;
     border-left: 0 solid transparent;
   }
-  .btn.left_btn.on,
-  .btn.left_btn:hover{
+  .btn.left_btn.on{
     border-right: 90px solid #e49300;
   }
 
@@ -195,8 +185,7 @@ body{
     border-bottom: 70px solid transparent;
     border-left: 90px solid #565656;
   }
-  .btn.right_btn.on,
-  .btn.right_btn:hover{
+  .btn.right_btn.on{
     border-left: 90px solid #e49300;
   }
 
@@ -206,8 +195,7 @@ body{
     border-bottom: 0 solid transparent;
     border-left: 70px solid transparent;
   }
-  .btn.bottom_btn.on,
-  .btn.bottom_btn:hover{
+  .btn.bottom_btn.on{
     border-top: 90px solid #e49300;
   }
 
@@ -237,8 +225,7 @@ body{
     border-bottom: 45px solid #565656;
     border-left: 35px solid transparent;
   }
-  .btn.top_btn.on,
-  .btn.top_btn:hover{
+  .btn.top_btn.on{
     border-bottom: 45px solid #e49300;
   }
 
@@ -248,8 +235,7 @@ body{
     border-bottom: 35px solid transparent;
     border-left: 0 solid transparent;
   }
-  .btn.left_btn.on,
-  .btn.left_btn:hover{
+  .btn.left_btn.on{
     border-right: 45px solid #e49300;
   }
 
@@ -259,8 +245,7 @@ body{
     border-bottom: 35px solid transparent;
     border-left: 45px solid #565656;
   }
-  .btn.right_btn.on,
-  .btn.right_btn:hover{
+  .btn.right_btn.on{
     border-left: 45px solid #e49300;
   }
 
@@ -270,8 +255,7 @@ body{
     border-bottom: 0 solid transparent;
     border-left: 35px solid transparent;
   }
-  .btn.bottom_btn.on,
-  .btn.bottom_btn:hover{
+  .btn.bottom_btn.on{
     border-top: 45px solid #e49300;
   }
 

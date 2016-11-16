@@ -6,3 +6,22 @@
 - server : WebSocket server
 - remocon : リモコン
 
+# つかいかた
+
+1. `./server/bridge3.js` を起動します。(ws://mz4u.net:3003を利用する場合は不要)
+
+```.shell
+> $ npm install ws    
+> $ npm install date-utils     
+> $ node bridge3.js    
+````
+
+2. `./mft2016/mft_rover` をCHIRIMENにインストールして起動
+
+> 1. で local環境に bridge3.jsを起動した場合には、 app.js 10行目のURLを書き換えてください
+
+3. `./remocon/` をローカルhttpサーバーで起動 (あるいは`http://mz4u.net/chirimen/remocon/`にアクセス) 
+
+> これがコントローラーになります。
+
+
