@@ -10,6 +10,10 @@
 
 1. `./server/bridge3.js` を起動します。(ws://mz4u.net:3003を利用する場合は不要)
 
+注意：
+node.jsは 新しいものだと動かないようです。
+v0.10.48 で動作確認しました。
+
 ```.shell
 > $ npm install ws    
 > $ npm install date-utils     

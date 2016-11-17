@@ -8,6 +8,8 @@ window.addEventListener('DOMContentLoaded', function() {
   var command;
 
   var host = "ws://mz4u.net:3003";
+//  var host = "ws://192.168.248.83:3003";
+  
   var ws = new poorws(host);
   var status = 0;
 

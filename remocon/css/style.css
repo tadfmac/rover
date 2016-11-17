@@ -105,8 +105,7 @@ body{
     border-bottom: 180px solid #565656;
     border-left: 140px solid transparent;
   }
-  .btn.top_btn.on,
-  .btn.top_btn:hover{
+  .btn.top_btn.on{
     border-bottom: 180px solid #e49300;
   }
 
